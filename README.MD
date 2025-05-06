@@ -26,9 +26,11 @@ conda create -n viewdiff python=3.10
 conda activate viewdiff
 pip install -r requirements.txt
 ```
+- Updated tensorflow version from 0.14 to 0.17 to resolve package dependancy issues
 
 Then install Pytorch3D by following the official instructions. For example, to install Pytorch3D on Linux (tested with Pytorch3D 0.7.4):
 
+- pytorch3d - build from github instead of direct installation
 ```
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
@@ -43,7 +45,7 @@ pip install --upgrade triton==2.1.0
 ## Data Preparation
 
 - Download CO3D categories that you would like to train on. Follow the official instructions here: https://github.com/facebookresearch/co3d. You should end up with a directory structure like this:
-
+- Download only the whole version of dataset(5tb) instead of subset data
 ```
 <co3d_root>
 <co3d_root>/teddybear
